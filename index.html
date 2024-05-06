@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .convite {
+            background-color: #007bff; /* Azul */
+            color: #fff; /* Texto branco */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff; /* branco */
+        }
+
+        .texto-branco {
+            color: #fff; /* Texto branco */
+        }
+
+        .texto-azul {
+            color: #007bff; /* Texto azul */
+        }
+
+        .botoes {
+            margin-top: 20px;
+        }
+
+        .botoes button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            background-color: #fff; /* Botão branco */
+            color: #007bff; /* Texto azul */
+        }
+
+        .botoes button:hover {
+            background-color: #ddd;
+        }
+
+        .resposta img {
+            display: none;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function aceitarConvite() {
+            document.getElementById('imagemAceitar').style.display = 'block';
+            document.getElementById('imagemRecusar').style.display = 'none';
+        }
+
+        function recusarConvite() {
+            document.getElementById('imagemRecusar').style.display = 'block';
+            document.getElementById('imagemAceitar').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div class="convite">
+        <h1 class="texto-amarelo">Convite para o meu amor ♡</h1>
+        <p class="texto-branco">Gostaria de convidar você para sair no próximo fim de semana.</p>
+        <p class="texto-branco">Vamos nos divertir juntinhaaaaaas!</p>
+        <p class="texto-branco">Quero passar um tempo com você.</p>
+        <p class="texto-branco">Mal posso esperar para te encontrar!</p>
+        <p class="texto-branco">Beijos e cheiros,</p>
+        <p class="texto-branco">Cris</p>
+        <p class="texto-branco">Aceitas?</p>
+        <div class="botoes">
+            <button onclick="aceitarConvite()">Aceitar</button>
+            <button onclick="recusarConvite()">Recusar</button>
+        </div>
+        <div class="resposta">
+            <img id="imagemAceitar" src="https://i.pinimg.com/originals/a5/63/47/a5634709c82e600dc4333c0338574a61.jpg" alt="Aceito">
+            <img id="imagemRecusar" src="https://i.pinimg.com/originals/58/0f/7d/580f7da1d55d06e8e744ef9bde650e4a.jpg" alt="Recusado">
+        </div>
+    </div>
+</body>
+</html>
